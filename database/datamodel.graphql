@@ -1,0 +1,49 @@
+type CountryCode {
+  id: ID! @unique
+  name: String
+  countryCode: String!
+  dialingCode: String! @unique
+  active: Boolean @default(value: true)
+  phoneNumbers: [PhoneNumber!]! @relation(name: "PhoneNumberOnCountryCode")
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+
+type Identifier {
+  id: ID! @unique
+  hash: String! @unique
+  phoneNumber: PhoneNumber @relation(name: "IdentifierOnPhoneNumber")
+  user: User @relation(name: "UserOnIdentifier")
+  verificationCodes: [VerificationCode!]! @relation(name: "VerificationCodeOnIdentifier")
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type PhoneNumber {
+  countryCode: CountryCode! @relation(name: "PhoneNumberOnCountryCode")
+  createdAt: DateTime!
+  id: ID! @unique
+  identifier: Identifier @relation(name: "IdentifierOnPhoneNumber")
+  phoneNumber: String! @unique
+  updatedAt: DateTime!
+}
+
+type User {
+  createdAt: DateTime!
+  id: ID! @unique
+  identifier: Identifier @relation(name: "UserOnIdentifier")
+  updatedAt: DateTime!
+  uuid: String @unique
+  isVerified: Boolean @default(value: false)
+}
+
+type VerificationCode {
+  code: String! @unique
+  createdAt: DateTime!
+  id: ID! @unique
+  identifier: Identifier @relation(name: "VerificationCodeOnIdentifier")
+  updatedAt: DateTime!
+  validUntil: DateTime!
+}
+

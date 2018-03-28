@@ -1,0 +1,6 @@
+version: "3"
+services:
+  serverless:
+    image: lambci/lambda:build-nodejs6.10
+    volumes:
+      - .:/var/task
