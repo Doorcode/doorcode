@@ -1,5 +1,18 @@
-# import User from "./generated/prisma.graphql"
+type VerificationHash {
+    success: Boolean
+    error: String
+}
+
+type ValidatedCode {
+    token: String
+    error: String
+    valid: Boolean
+}
 
 type Query {
-    users: [User!]!
+    verifyWithPhoneNumber(
+        phoneNumber: String!
+        dialingCode: String!
+    ): VerificationHash
+    validateCode(code: String!, verificationHash: String!): ValidatedCode
 }
