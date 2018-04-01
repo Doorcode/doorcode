@@ -9,10 +9,16 @@ type ValidatedCode {
     valid: Boolean
 }
 
+type ExchangedToken {
+    uuid: String
+    error: String
+}
+
 type Query {
     verifyWithPhoneNumber(
         phoneNumber: String!
         dialingCode: String!
     ): VerificationHash
     validateCode(code: String!, verificationHash: String!): ValidatedCode
+    exchangeTokenForUser(token: String!): ExchangedToken
 }

@@ -16,11 +16,15 @@ const validateCode = async (
         const verificationCodeExists = await db.exists.VerificationCode({
             code,
         })
-        const hash: { phoneNumber: string } = Identifier.validateHash(
-            verificationHash,
-        ) as { phoneNumber: string }
 
-        if (verificationCodeExists && !isNull(hash.phoneNumber)) {
+        // Hashes are strings that can be generated based on common data
+        // shared between client and server without previously transmitting it
+        // such as the user's phone number as a nonce preventing replay attacks
+        const hash: { nonce: string } = Identifier.validateHash(
+            verificationHash,
+        )
+
+        if (verificationCodeExists && !isNull(hash.nonce)) {
             const verificationCode = await db.query.verificationCode({
                 where: {
                     code,
@@ -40,9 +44,8 @@ const validateCode = async (
             }
 
             const identifier = await db.query.identifier(
-                {
-                    where: { hash: verificationHash },
-                },
+                { where: { hash: verificationHash } }, // Code and Hash potentially could belong to different identities or none at all
+                // Instead of taking a valid hash/code at face value cross reference it
                 `{ user { id } verificationCodes(where: { code: "${code}"}) { code } }`,
             )
 
@@ -71,7 +74,9 @@ const validateCode = async (
                     data: {
                         uuid,
                         isVerified: true,
-                        identifier: { connect: { hash: verificationHash } },
+                        identifier: {
+                            connect: { hash: verificationHash },
+                        },
                     },
                 })
                 return {
