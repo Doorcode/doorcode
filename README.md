@@ -1,5 +1,3 @@
-[Get your badge here](https://github.com/TheLADbibleGroup/engineering-documentation-handbook/tree/master/continuous-deployment)
-
 # Doorcode
 
 Doorcode is a graphQL based service which provides one-time-only / passwordless tokens that can be used as a method for giving access to restricted systems, applications or user accounts.
