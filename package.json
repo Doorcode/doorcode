@@ -8,7 +8,9 @@
     "build": "rimraf dist && tsc",
     "lint": "tslint --fix --project tsconfig.json {src,test}/**/*.ts",
     "format": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write './**/*.{js,ts,graphql,gql,json}'",
-    "precommit": "pretty-quick --staged && yarn run lint"
+    "precommit": "pretty-quick --staged && yarn run lint",
+    "deploy": "now --public --dotenv .env --npm && now alias && now rm --yes --safe doorcode",
+    "now-start": "node dist"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -42,5 +44,8 @@
     "tslint": "^5.9.1",
     "tslint-config-prettier": "^1.10.0",
     "typescript": "2.8.1"
-  }
+  },
+  "now": {
+        "alias": "doorcode"
+    }
 }
