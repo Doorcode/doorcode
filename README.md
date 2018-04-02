@@ -58,7 +58,7 @@ Verification using a phone number (SMS) requires 3 steps:
 
     If a token is invalid or the identity has not been verified (more on how this can happen [here](#identity-token-states)) `uuid` will be `null` and an error message will be returned.
 
-[### Generating a verification hash](#generating-a-verification-hash)
+### [Generating a verification hash](#generating-a-verification-hash)
 
 As you've seen in step 2 of our verification workflow you will likely need to generate a verification hash, this can be seen as a public key which uses shared data available to both the client and the server. For the `verifyWithPhoneNumber` that will be the user's phone number - however, we don't want to trasmit this beyond the first step and we wish to only use it to verify that further steps taken to verify our identity is coming from the same device, application etc.
 
@@ -68,7 +68,7 @@ A `verificationHash` is a standard JWT token using HS256 and provides a payload 
 
 2.  Generate a valid JWT token with your nonce as the payload, include `noTimestamp` as `true` as we do not wish for the hash to expire and it will remain the same for this identity unless your application secret changes or their shared data changes. You should also sign your JWT token with your application secret.
 
-[### Identity token states](#identity-token-states)
+### [Identity token states](#identity-token-states)
 
 A token carries no state, but does represent a UUID. If the identity behind the UUID has not been verified token exchanges will fail.
 
