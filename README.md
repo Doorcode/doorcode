@@ -21,7 +21,7 @@ Verification using a phone number (SMS) requires 3 steps:
     }
     ```
 
-    If the query succeeds success will be returned `true` and the recepient will receive a 6 digit code. Otherwise success will be returned as `false` and an error message returned.
+    If the query succeeds `success` will be returned `true` and the recipient will receive a 6 digit code. Otherwise `success` will be returned as `false` and an error message returned.
 
 2.  Make a `validateCode` query that accepts a code (sent to the device) and a `verificationHash`. The hash is generated using common data shared between the client and the doorcode service and is used as a mechanism to prevent man-in-the-middle and replay attacks. You could consider the `verificationHash` as a public key.
 
@@ -58,7 +58,7 @@ Verification using a phone number (SMS) requires 3 steps:
 
 ### [Generating a verification hash](#generating-a-verification-hash)
 
-As you've seen in step 2 of our verification workflow you will likely need to generate a verification hash, this can be seen as a public key which uses shared data available to both the client and the server. For the `verifyWithPhoneNumber` that will be the user's phone number - however, we don't want to trasmit this beyond the first step and we wish to only use it to verify that further steps taken to verify our identity is coming from the same device, application etc.
+As you've seen in step 2 of our verification workflow you will likely need to generate a verification hash, this can be seen as a public key which uses shared data available to both the client and the server. For the `verifyWithPhoneNumber` that will be the user's phone number - however, we don't want to transmit this beyond the first step and we wish to only use it to verify that further steps taken to verify our identity are coming from the same device, application etc.
 
 A `verificationHash` is a standard JWT token using HS256 and provides a payload with a nonce. The nonce will be our shared data. There's 2 parts to generating our hash.
 
