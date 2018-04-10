@@ -20,7 +20,7 @@ const server = new GraphQLServer({
 })
 
 const engine = new ApolloEngine({
-    apiKey: 'service:Doorcode:p8F55rI3WitdvaJ0ik8B1w',
+    apiKey: process.env.APOLLO_ENGINE_KEY,
 })
 
 const httpServer = server.configure({
