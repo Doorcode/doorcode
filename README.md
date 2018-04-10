@@ -78,7 +78,7 @@ It is possible for an indentity to become unverified if the application or user 
 
 No, a token will not expire but they may change if the underlying identity changes, most likely a token will be immutable and can be stored safely for long periods of time, even if a user wishes to verify themselves again; a token will only be valid once an identity is verified.
 
-### Prerequisites
+## Prerequisites
 
 ### [Prisma](https://github.com/graphcool/prisma)
 
@@ -88,11 +88,13 @@ We use Prisma and prisma-bindings as our primary data store. Prisma provides a g
 
 We use Docker as a way to containerize and easily deploy the Doorcode application.
 
-### Installing
+## Installing
 
 `yarn` or `npm install` can be used to install the necessary packages, our preferred option is `yarn`
 
 ### Config
+
+Copy `.env.dist` and update with relevant value for environment destination
 
 ## Commands
 
@@ -104,12 +106,24 @@ We use Docker as a way to containerize and easily deploy the Doorcode applicatio
 
 ## Running Tests
 
-### Deployment / Versioning
+## Deployment / Versioning
 
-### Dependancies
+### Upgrading Prisma
 
-### Gotchas
+#### Local
 
-#### Invalid JWT token or failed verification
+`prisma local upgrade`
+
+#### Docker - production/staging
+
+First you'll need to export the docker env variables for the `prisma` machine using `eval $(docker-machine env prisma)`.
+
+If there is a cluster already running you'll need to stop the prisma container `docker stop doorcode_prisma-database_1` and delete it `docker rm doorcode_prisma-database_1` so we can upgrade the prisma version. You should first update `docker-compose.yml` with a newer version on this line `'prismagraphql/prisma:x.x.x'`.
+
+Finally execute `docker-compose up -d` to pull the latest version specified and bring up the prisma application.
+
+## Gotchas
+
+### Invalid JWT token or failed verification
 
 A great resource for verifying and validating JWT tokens is [jwt.io](https://jwt.io/) you can confirm whether your token is as expected and diagnose issues with their free tool.

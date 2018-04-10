@@ -11,7 +11,9 @@
     "lint": "tslint --fix --project tsconfig.json {src,test}/**/*.ts",
     "format": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write './**/*.{js,ts,graphql,gql,json}'",
     "precommit": "pretty-quick --staged && yarn run lint",
-    "deploy": "now --public --dotenv .env --npm && now alias -r rules.json && now rm --yes --safe doorcode",
+    "predeploy": "prisma deploy -e .env.production",
+    "deploy": "now --public --dotenv .env.production --npm && now alias -r rules.json && now rm --yes --safe doorcode",
+    "deploy:local": "prisma deploy -e .env",
     "start": "npm-run-all --parallel server:start service:send-sms:start proxy:start",
     "start:dev": "npm-run-all --parallel server:dev service:send-sms:dev proxy:start"
   },

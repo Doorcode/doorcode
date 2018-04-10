@@ -8,7 +8,7 @@ cluster: '${env:PRISMA_CLUSTER}'
 subscriptions:
   sendVerificationCode:
     webhook:
-      url: 'http://583d3ab7.ngrok.io/send-sms'
+      url: '${env:DOORCODE_SUBSCRIPTION_SMS_WEBHOOK}'
       headers:
         Content-Type: application/json
     query: subscriptions/SendVerificationCode.graphql
