@@ -1,0 +1,16 @@
+subscription {
+  verificationCode (where: { mutation_in: [CREATED] }) {
+    node {
+      code
+      validUntil
+      identifier {
+        phoneNumber {
+          phoneNumber
+          countryCode {
+            dialingCode
+          }
+        }
+      }
+    }
+  }
+}

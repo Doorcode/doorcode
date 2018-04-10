@@ -1,0 +1,10 @@
+{
+    "rules": [
+        {
+            "pathname": "/send-sms",
+            "method": ["POST", "OPTIONS"],
+            "dest": "http://localhost:5000"
+        },
+        { "pathname": "/**", "dest": "http://localhost:4000" }
+    ]
+}

@@ -1,18 +1,14 @@
-# the name for the service (will be part of the service's HTTP endpoint)
 service: doorcode
-
-# the cluster and stage the service is deployed to
-stage: ${env:PRISMA_STAGE}
-
-# to disable authentication:
-# disableAuth: true
-secret: ${env:PRISMA_SECRET}
-
-# the file path pointing to your data model
+stage: '${env:PRISMA_STAGE}'
+secret: '${env:PRISMA_SECRET}'
 datamodel: datamodel.graphql
-
-# seed your service with initial data based on seed.graphql
 seed:
   import: seed.graphql
-
-cluster: ${env:PRISMA_CLUSTER}
+cluster: '${env:PRISMA_CLUSTER}'
+subscriptions:
+  sendVerificationCode:
+    webhook:
+      url: 'http://583d3ab7.ngrok.io/send-sms'
+      headers:
+        Content-Type: application/json
+    query: subscriptions/SendVerificationCode.graphql

@@ -96,11 +96,11 @@ We use Docker as a way to containerize and easily deploy the Doorcode applicatio
 
 ## Commands
 
-`(yarn | npm) run start` - transpiles code & runs the server on port 4000 (by default) with no hot reloading or output
+`(yarn | npm) run server:start` - transpiles code & runs the server on port 4000 (by default) with no hot reloading or output
 
-`(yarn | npm) run dev` - transpiles code & runs a development server on port 4000 (by default) and enables hot reloading
+`(yarn | npm) run server:dev` - transpiles code & runs a development server on port 4000 (by default) and enables hot reloading
 
-`(yarn | npm) run debug` - transpiles code & runs a development server on port 4000 (by default) and enables a nodejs inspect session
+`(yarn | npm) run server:debug` - transpiles code & runs a development server on port 4000 (by default) and enables a nodejs inspect session
 
 ## Running Tests
 

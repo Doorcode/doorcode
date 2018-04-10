@@ -1,38 +1,49 @@
 {
   "name": "doorcode",
   "scripts": {
-    "start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
-    "dev": "npm-run-all --parallel start playground",
-    "debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
+    "proxy:start": "node_modules/.bin/micro-proxy -r rules.json",
+    "server:start": "dotenv -- nodemon -e ts,graphql -x ts-node src/index.ts",
+    "server:dev": "npm-run-all --parallel server:start playground",
+    "server:debug": "dotenv -- nodemon -e ts,graphql -x ts-node --inspect src/index.ts",
+    "service:send-sms:start": "dotenv -- nodemon -e ts -x ts-node node_modules/.bin/micro -p 5000 src/services/send-sms/index.ts",
+    "service:send-sms:dev": "dotenv -- nodemon -e ts -x ts-node node_modules/.bin/micro-dev -p 5000 src/services/send-sms/index.ts",
     "playground": "graphql playground",
-    "build": "rimraf dist && tsc",
     "lint": "tslint --fix --project tsconfig.json {src,test}/**/*.ts",
     "format": "prettier --config './.prettierrc.yaml' --ignore-path './.prettierignore' --write './**/*.{js,ts,graphql,gql,json}'",
     "precommit": "pretty-quick --staged && yarn run lint",
-    "deploy": "now --public --dotenv .env --npm && now alias && now rm --yes --safe doorcode",
-    "now-start": "node dist"
+    "deploy": "now --public --dotenv .env --npm && now alias -r rules.json && now rm --yes --safe doorcode",
+    "start": "npm-run-all --parallel server:start service:send-sms:start proxy:start",
+    "start:dev": "npm-run-all --parallel server:dev service:send-sms:dev proxy:start"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "clockwork": "^0.1.4",
     "graphql-yoga": "1.7.0",
     "jsonwebtoken": "^8.2.0",
+    "micro": "^9.1.4",
     "moment": "^2.21.0",
     "prisma-binding": "1.5.16",
     "ramda": "^0.25.0",
+    "raven": "^2.5.0",
     "uuid": "^3.2.1",
-    "validate.js": "^0.12.0"
+    "validate.js": "^0.12.0",
+    "validatejs": "^0.0.2"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.1",
     "@types/jsonwebtoken": "^7.2.6",
+    "@types/micro": "^7.3.1",
     "@types/moment": "^2.13.0",
     "@types/node": "^9.6.0",
     "@types/ramda": "^0.25.21",
+    "@types/raven": "^2.1.6",
     "@types/uuid": "^3.4.3",
     "@types/validate.js": "^0.11.0",
     "dotenv-cli": "1.4.0",
     "graphql-cli": "2.15.8",
     "husky": "^0.14.3",
+    "micro-dev": "^2.2.2",
+    "micro-proxy": "^1.1.0",
     "nodemon": "1.17.2",
     "npm-run-all": "4.1.2",
     "prettier": "^1.11.1",
@@ -46,6 +57,6 @@
     "typescript": "2.8.1"
   },
   "now": {
-        "alias": "doorcode"
-    }
+    "alias": "doorcode"
+  }
 }
