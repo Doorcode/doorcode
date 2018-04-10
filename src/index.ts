@@ -1,7 +1,10 @@
-import { GraphQLServer, Options } from 'graphql-yoga'
+import { GraphQLServer, Options, PubSub } from '@fabien0102/graphql-yoga' // https://github.com/graphcool/graphql-yoga/pull/209
+import { ApolloEngine } from 'apollo-engine'
+import { Server } from 'http'
 import { Prisma } from './generated/prisma'
 import resolvers from './resolvers'
 
+const pubsub = new PubSub()
 const server = new GraphQLServer({
     typeDefs: './src/schema.graphql',
     resolvers,
@@ -12,9 +15,29 @@ const server = new GraphQLServer({
             secret: process.env.PRISMA_SECRET, // taken from database/prisma.yml (value is set in .env)
             debug: false, // log all GraphQL queries & mutations
         }),
+        pubsub,
     }),
 })
 
-server.start({ port: 4000 }, (options: Options) =>
-    console.info(`Server is running on http://localhost:${options.port}`),
+const engine = new ApolloEngine({
+    apiKey: 'service:Doorcode:p8F55rI3WitdvaJ0ik8B1w',
+})
+
+const httpServer = server.configure({
+    tracing: true,
+    cacheControl: true,
+}) as Server
+
+engine.listen(
+    {
+        port: process.env.HTTP_PORT,
+        httpServer,
+        graphqlPaths: ['/'],
+        launcherOptions: {
+            startupTimeout: 3000,
+        },
+    },
+    () => console.info(`Server is running on port ${process.env.HTTP_PORT}`),
 )
+
+server.createSubscriptionServer(httpServer)
