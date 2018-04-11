@@ -46,7 +46,8 @@ const validateCode = async (
             }
 
             const identifier = await db.query.identifier(
-                { where: { hash: verificationHash } }, // Code and Hash potentially could belong to different identities or none at all
+                { where: { hash: verificationHash } },
+                // Code and Hash potentially could belong to different identities or none at all
                 // Instead of taking a valid hash/code at face value cross reference it
                 `{ user { id } verificationCodes(where: { code: "${code}"}) { code } }`,
             )

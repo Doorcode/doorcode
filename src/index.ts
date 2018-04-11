@@ -1,4 +1,4 @@
-import { GraphQLServer, Options, PubSub } from '@fabien0102/graphql-yoga' // https://github.com/graphcool/graphql-yoga/pull/209
+import { GraphQLServer, Options } from '@fabien0102/graphql-yoga' // https://github.com/graphcool/graphql-yoga/pull/209
 import { ApolloEngine } from 'apollo-engine'
 import { IncomingMessage, Server } from 'http'
 import { Prisma } from './generated/prisma'
@@ -17,14 +17,12 @@ interface AuthorizedApplicationContextParameters extends ContextParameters {
     request: AuthorizedApplicationRequest
 }
 
-const pubsub = new PubSub()
 const server = new GraphQLServer({
     typeDefs: './src/schema.graphql',
     resolvers,
     context: (params: AuthorizedApplicationContextParameters) => ({
         authorizedApplication: params.request.authorization,
         db: database,
-        pubsub,
     }),
 })
 
@@ -62,5 +60,3 @@ engine.listen(
     },
     () => console.info(`Server is running on port ${process.env.HTTP_PORT}`),
 )
-
-server.createSubscriptionServer(httpServer)

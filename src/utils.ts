@@ -1,5 +1,6 @@
 import { IncomingMessage, Server } from 'http'
 import * as jwt from 'jsonwebtoken'
+import { isNullOrUndefined } from 'util'
 import { Prisma } from './generated/prisma'
 
 export interface AuthorizedApplicationResponse {
@@ -23,6 +24,10 @@ export const authorizationExtraction = async (
     db: Prisma,
 ): Promise<null | AuthorizedApplicationResponse> => {
     try {
+        if (isNullOrUndefined(req.headers.authorization)) {
+            throw Error('Required Bearer token missing')
+        }
+
         const authorization = req.headers.authorization as string
         const token = authorization.replace('Bearer ', '')
         const decoded = jwt.decode(token) as { appId: string }

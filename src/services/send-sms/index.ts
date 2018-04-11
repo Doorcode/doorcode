@@ -59,28 +59,28 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
         if (moment(validUntil).isBefore(moment())) {
             res.statusCode = 400
             res.end('Verfication code has expired')
-        }
-
-        provider
-            .send(
-                `${dialingCode}${phoneNumber.phoneNumber}`,
-                `Here is your verification code: ${verificationCode}`,
-                applicationName,
-            )
-            .then((success: boolean) => {
-                if (!success) {
-                    throw new Error('Sending verification code failed')
-                }
-
-                res.end(
-                    `Sent verification message to +${
-                        phoneNumber.countryCode.dialingCode
-                    }${phoneNumber.phoneNumber}`,
+        } else {
+            provider
+                .send(
+                    `${dialingCode}${phoneNumber.phoneNumber}`,
+                    `Here is your verification code: ${verificationCode}`,
+                    applicationName,
                 )
-            })
-            .catch((error: Error) => {
-                handleError(error, req, res)
-            })
+                .then((success: boolean) => {
+                    if (!success) {
+                        throw new Error('Sending verification code failed')
+                    }
+
+                    res.end(
+                        `Sent verification message to +${
+                            phoneNumber.countryCode.dialingCode
+                        }${phoneNumber.phoneNumber}`,
+                    )
+                })
+                .catch((error: Error) => {
+                    handleError(error, req, res)
+                })
+        }
     } catch (error) {
         const e = error as Error
         handleError(e, req, res)
