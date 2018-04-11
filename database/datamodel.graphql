@@ -36,13 +36,35 @@ type User {
     updatedAt: DateTime!
     uuid: String @unique
     isVerified: Boolean @default(value: false)
+    ownedApplications: [Application!]! @relation(name: "ApplicationOwners")
+    memberOf: [Application!]! @relation(name: "ApplicationMembers")
+    userOf: [Application!]! @relation(name: "ApplicationUsers")
 }
 
 type VerificationCode {
+    id: ID! @unique
     code: String! @unique
     createdAt: DateTime!
-    id: ID! @unique
+    application: Application! @relation(name: "VerificationCodeForApplication")
     identifier: Identifier @relation(name: "VerificationCodeOnIdentifier")
     updatedAt: DateTime!
     validUntil: DateTime!
+}
+
+type Application {
+    id: ID! @unique
+    appId: String! @unqiue
+    name: String! @unique
+    description: String @default(value: "")
+    owners: [User!]! @relation(name: "ApplicationOwners")
+    members: [User!]! @relation(name: "ApplicationMembers")
+    users: [User!]! @relation(name: "ApplicationUsers")
+    credentials: ApplicationCredentials!
+    verificationCodes: [VerificationCode!]!
+        @relation(name: "VerificationCodeForApplication")
+}
+
+type ApplicationCredentials {
+    secret: String!
+    active: Boolean @default(value: true)
 }

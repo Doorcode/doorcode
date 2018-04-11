@@ -1,16 +1,18 @@
+import { Prisma } from '../generated/prisma'
 import Identifier from '../models/Identifier'
 import Indentity from '../models/Identity'
 import VerificationCode from '../models/VerificationCode'
+import AssociateUserWithApp from '../resolvers/AssociateUserWithApp'
+import { AuthorizedApplicationResponse, Context } from '../utils'
 
-import { Context } from '../utils'
-
+import { context } from 'raven'
 import { isNull } from 'util'
-import { Prisma } from '../generated/prisma'
 
 const validateCode = async (
     code: string,
     verificationHash: string,
     db: Prisma,
+    authorizedApplication?: AuthorizedApplicationResponse,
 ): Promise<{ valid: boolean; token?: string; error?: string }> => {
     try {
         const verificationCodeExists = await db.exists.VerificationCode({
@@ -64,6 +66,12 @@ const validateCode = async (
                     },
                 })
 
+                const associatedUser = await AssociateUserWithApp(
+                    user.uuid,
+                    authorizedApplication.appId,
+                    db,
+                )
+
                 return {
                     token: Identifier.generateToken(user.uuid),
                     valid: true,
@@ -79,6 +87,13 @@ const validateCode = async (
                         },
                     },
                 })
+
+                const associatedUser = await AssociateUserWithApp(
+                    user.uuid,
+                    authorizedApplication.appId,
+                    db,
+                )
+
                 return {
                     token: Identifier.generateToken(user.uuid),
                     valid: true,

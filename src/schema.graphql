@@ -14,6 +14,11 @@ type ExchangedToken {
     error: String
 }
 
+type AssociatedUserWithApp {
+    success: Boolean
+    error: String
+}
+
 type Query {
     verifyWithPhoneNumber(
         phoneNumber: String!
@@ -21,4 +26,5 @@ type Query {
     ): VerificationHash
     validateCode(code: String!, verificationHash: String!): ValidatedCode
     exchangeTokenForUser(token: String!): ExchangedToken
+    associateUserWithApp(uuid: String!, appId: String!): AssociatedUserWithApp
 }

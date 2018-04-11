@@ -1,943 +1,1012 @@
 mutation {
-    af: createCountryCode(data: {
-        name: "Afghanistan",
-        countryCode: "AF",
-        dialingCode: "93"
-    }) { id }
-    al: createCountryCode(data: {
-        name: "Albania",
-        countryCode: "AL",
-        dialingCode: "355"
-    }) { id }
-    dz: createCountryCode(data: {
-        name: "Algeria",
-        countryCode: "DZ",
-        dialingCode: "213"
-    }) { id }
-    ad: createCountryCode(data: {
-        name: "Andorra",
-        countryCode: "AD",
-        dialingCode: "376"
-    }) { id }
-    ao: createCountryCode(data: {
-        name: "Angola",
-        countryCode: "AO",
-        dialingCode: "244"
-    }) { id }
-    ai: createCountryCode(data: {
-        name: "Anguilla",
-        countryCode: "AI",
-        dialingCode: "1264"
-    }) { id }
-    ag: createCountryCode(data: {
-        name: "Antigua and Barbuda",
-        countryCode: "AG",
-        dialingCode: "1268"
-    }) { id }
-    ar: createCountryCode(data: {
-        name: "Argentina",
-        countryCode: "AR",
-        dialingCode: "54"
-    }) { id }
-    am: createCountryCode(data: {
-        name: "Armenia",
-        countryCode: "AM",
-        dialingCode: "374"
-    }) { id }
-    aw: createCountryCode(data: {
-        name: "Aruba",
-        countryCode: "AW",
-        dialingCode: "297"
-    }) { id }
-    au: createCountryCode(data: {
-        name: "Australia",
-        countryCode: "AU",
-        dialingCode: "61"
-    }) { id }
-    at: createCountryCode(data: {
-        name: "Austria",
-        countryCode: "AT",
-        dialingCode: "43"
-    }) { id }
-    az: createCountryCode(data: {
-        name: "Azerbaijan",
-        countryCode: "AZ",
-        dialingCode: "994"
-    }) { id }
-    bh: createCountryCode(data: {
-        name: "Bahrain",
-        countryCode: "BH",
-        dialingCode: "973"
-    }) { id }
-    bd: createCountryCode(data: {
-        name: "Bangladesh",
-        countryCode: "BD",
-        dialingCode: "880"
-    }) { id }
-    bb: createCountryCode(data: {
-        name: "Barbados",
-        countryCode: "BB",
-        dialingCode: "1246"
-    }) { id }
-    by: createCountryCode(data: {
-        name: "Belarus",
-        countryCode: "BY",
-        dialingCode: "375"
-    }) { id }
-    be: createCountryCode(data: {
-        name: "Belgium",
-        countryCode: "BE",
-        dialingCode: "32"
-    }) { id }
-    bz: createCountryCode(data: {
-        name: "Belize",
-        countryCode: "BZ",
-        dialingCode: "501"
-    }) { id }
-    bj: createCountryCode(data: {
-        name: "Benin",
-        countryCode: "BJ",
-        dialingCode: "229"
-    }) { id }
-    bm: createCountryCode(data: {
-        name: "Bermuda",
-        countryCode: "BM",
-        dialingCode: "1441"
-    }) { id }
-    bo: createCountryCode(data: {
-        name: "Bolivia",
-        countryCode: "BO",
-        dialingCode: "591"
-    }) { id }
-    ba: createCountryCode(data: {
-        name: "Bosnia and Herzegovina",
-        countryCode: "BA",
-        dialingCode: "387"
-    }) { id }
-    bw: createCountryCode(data: {
-        name: "Botswana",
-        countryCode: "BW",
-        dialingCode: "267"
-    }) { id }
-    br: createCountryCode(data: {
-        name: "Brazil",
-        countryCode: "BR",
-        dialingCode: "55"
-    }) { id }
-    vg: createCountryCode(data: {
-        name: "British Virgin Islands",
-        countryCode: "VG",
-        dialingCode: "1284"
-    }) { id }
-    bn: createCountryCode(data: {
-        name: "Brunei",
-        countryCode: "BN",
-        dialingCode: "673"
-    }) { id }
-    bg: createCountryCode(data: {
-        name: "Bulgaria",
-        countryCode: "BG",
-        dialingCode: "359"
-    }) { id }
-    bf: createCountryCode(data: {
-        name: "Burkina Faso",
-        countryCode: "BF",
-        dialingCode: "226"
-    }) { id }
-    bi: createCountryCode(data: {
-        name: "Burundi",
-        countryCode: "BI",
-        dialingCode: "257"
-    }) { id }
-    kh: createCountryCode(data: {
-        name: "Cambodia",
-        countryCode: "KH",
-        dialingCode: "855"
-    }) { id }
-    cm: createCountryCode(data: {
-        name: "Cameroon",
-        countryCode: "CM",
-        dialingCode: "237"
-    }) { id }
-    cv: createCountryCode(data: {
-        name: "Cape Verde",
-        countryCode: "CV",
-        dialingCode: "238"
-    }) { id }
-    ky: createCountryCode(data: {
-        name: "Cayman Islands",
-        countryCode: "KY",
-        dialingCode: "1345"
-    }) { id }
-    cf: createCountryCode(data: {
-        name: "Central can Republic",
-        countryCode: "CF",
-        dialingCode: "236"
-    }) { id }
-    td: createCountryCode(data: {
-        name: "Chad",
-        countryCode: "TD",
-        dialingCode: "235"
-    }) { id }
-    cl: createCountryCode(data: {
-        name: "Chile",
-        countryCode: "CL",
-        dialingCode: "56"
-    }) { id }
-    cn: createCountryCode(data: {
-        name: "China",
-        countryCode: "CN",
-        dialingCode: "86"
-    }) { id }
-    co: createCountryCode(data: {
-        name: "Colombia",
-        countryCode: "CO",
-        dialingCode: "57"
-    }) { id }
-    km: createCountryCode(data: {
-        name: "Comoros",
-        countryCode: "KM",
-        dialingCode: "269"
-    }) { id }
-    cr: createCountryCode(data: {
-        name: "Costa Rica",
-        countryCode: "CR",
-        dialingCode: "506"
-    }) { id }
-    hr: createCountryCode(data: {
-        name: "Croatia",
-        countryCode: "HR",
-        dialingCode: "385"
-    }) { id }
-    cu: createCountryCode(data: {
-        name: "Cuba",
-        countryCode: "CU",
-        dialingCode: "53"
-    }) { id }
-    cy: createCountryCode(data: {
-        name: "Cyprus",
-        countryCode: "CY",
-        dialingCode: "357"
-    }) { id }
-    cz: createCountryCode(data: {
-        name: "Czech Republic",
-        countryCode: "CZ",
-        dialingCode: "420"
-    }) { id }
-    cd: createCountryCode(data: {
-        name: "Democratic Republic of the Congo",
-        countryCode: "CD",
-        dialingCode: "243"
-    }) { id }
-    dk: createCountryCode(data: {
-        name: "Denmark",
-        countryCode: "DK",
-        dialingCode: "45"
-    }) { id }
-    dj: createCountryCode(data: {
-        name: "Djibouti",
-        countryCode: "DJ",
-        dialingCode: "253"
-    }) { id }
-    dm: createCountryCode(data: {
-        name: "Dominica",
-        countryCode: "DM",
-        dialingCode: "1767"
-    }) { id }
-    do: createCountryCode(data: {
-        name: "Dominican Republic",
-        countryCode: "DO",
-        dialingCode: "1809"
-    }) { id }
-    ec: createCountryCode(data: {
-        name: "Ecuador",
-        countryCode: "EC",
-        dialingCode: "593"
-    }) { id }
-    eg: createCountryCode(data: {
-        name: "Egypt",
-        countryCode: "EG",
-        dialingCode: "20"
-    }) { id }
-    sv: createCountryCode(data: {
-        name: "El Salvador",
-        countryCode: "SV",
-        dialingCode: "503"
-    }) { id }
-    ee: createCountryCode(data: {
-        name: "Estonia",
-        countryCode: "EE",
-        dialingCode: "372"
-    }) { id }
-    et: createCountryCode(data: {
-        name: "Ethiopia",
-        countryCode: "ET",
-        dialingCode: "251"
-    }) { id }
-    fo: createCountryCode(data: {
-        name: "Faroe Islands",
-        countryCode: "FO",
-        dialingCode: "298"
-    }) { id }
-    fj: createCountryCode(data: {
-        name: "Fiji",
-        countryCode: "FJ",
-        dialingCode: "679"
-    }) { id }
-    fi: createCountryCode(data: {
-        name: "Finland",
-        countryCode: "FI",
-        dialingCode: "358"
-    }) { id }
-    pf: createCountryCode(data: {
-        name: "French Polynesia",
-        countryCode: "PF",
-        dialingCode: "689"
-    }) { id }
-    ga: createCountryCode(data: {
-        name: "Gabon",
-        countryCode: "GA",
-        dialingCode: "241"
-    }) { id }
-    gm: createCountryCode(data: {
-        name: "Gambia",
-        countryCode: "GM",
-        dialingCode: "220"
-    }) { id }
-    ge: createCountryCode(data: {
-        name: "Georgia",
-        countryCode: "GE",
-        dialingCode: "995"
-    }) { id }
-    de: createCountryCode(data: {
-        name: "Germany",
-        countryCode: "DE",
-        dialingCode: "49"
-    }) { id }
-    gh: createCountryCode(data: {
-        name: "Ghana",
-        countryCode: "GH",
-        dialingCode: "233"
-    }) { id }
-    gr: createCountryCode(data: {
-        name: "Greece",
-        countryCode: "GR",
-        dialingCode: "30"
-    }) { id }
-    gl: createCountryCode(data: {
-        name: "Greenland",
-        countryCode: "GL",
-        dialingCode: "299"
-    }) { id }
-    gd: createCountryCode(data: {
-        name: "Grenada",
-        countryCode: "GD",
-        dialingCode: "1473"
-    }) { id }
-    gu: createCountryCode(data: {
-        name: "Guam",
-        countryCode: "GU",
-        dialingCode: "1671"
-    }) { id }
-    gt: createCountryCode(data: {
-        name: "Guatemala",
-        countryCode: "GT",
-        dialingCode: "502"
-    }) { id }
-    gn: createCountryCode(data: {
-        name: "Guinea",
-        countryCode: "GN",
-        dialingCode: "224"
-    }) { id }
-    gw: createCountryCode(data: {
-        name: "Guinea-Bissau",
-        countryCode: "GW",
-        dialingCode: "245"
-    }) { id }
-    gy: createCountryCode(data: {
-        name: "Guyana",
-        countryCode: "GY",
-        dialingCode: "592"
-    }) { id }
-    ht: createCountryCode(data: {
-        name: "Haiti",
-        countryCode: "HT",
-        dialingCode: "509"
-    }) { id }
-    hn: createCountryCode(data: {
-        name: "Honduras",
-        countryCode: "HN",
-        dialingCode: "504"
-    }) { id }
-    hk: createCountryCode(data: {
-        name: "Hong Kong",
-        countryCode: "HK",
-        dialingCode: "852"
-    }) { id }
-    hu: createCountryCode(data: {
-        name: "Hungary",
-        countryCode: "HU",
-        dialingCode: "36"
-    }) { id }
-    is: createCountryCode(data: {
-        name: "Iceland",
-        countryCode: "IS",
-        dialingCode: "354"
-    }) { id }
-    in: createCountryCode(data: {
-        name: "India",
-        countryCode: "IN",
-        dialingCode: "91"
-    }) { id }
-    id: createCountryCode(data: {
-        name: "Indonesia",
-        countryCode: "ID",
-        dialingCode: "62"
-    }) { id }
-    ir: createCountryCode(data: {
-        name: "Iran",
-        countryCode: "IR",
-        dialingCode: "98"
-    }) { id }
-    iq: createCountryCode(data: {
-        name: "Iraq",
-        countryCode: "IQ",
-        dialingCode: "964"
-    }) { id }
-    ie: createCountryCode(data: {
-        name: "Ireland",
-        countryCode: "IE",
-        dialingCode: "353"
-    }) { id }
-    il: createCountryCode(data: {
-        name: "Israel",
-        countryCode: "IL",
-        dialingCode: "972"
-    }) { id }
-    it: createCountryCode(data: {
-        name: "Italy",
-        countryCode: "IT",
-        dialingCode: "39"
-    }) { id }
-    ci: createCountryCode(data: {
-        name: "Ivory Coast",
-        countryCode: "CI",
-        dialingCode: "225"
-    }) { id }
-    jm: createCountryCode(data: {
-        name: "Jamaica",
-        countryCode: "JM",
-        dialingCode: "1876"
-    }) { id }
-    jp: createCountryCode(data: {
-        name: "Japan",
-        countryCode: "JP",
-        dialingCode: "81"
-    }) { id }
-    jo: createCountryCode(data: {
-        name: "Jordan",
-        countryCode: "JO",
-        dialingCode: "962"
-    }) { id }
-    kz: createCountryCode(data: {
-        name: "Kazakhstan",
-        countryCode: "KZ",
-        dialingCode: "74"
-    }) { id }
-    kz2: createCountryCode(data: {
-        name: "Kazakhstan",
-        countryCode: "KZ",
-        dialingCode: "76"
-    }) { id }
-    ke: createCountryCode(data: {
-        name: "Kenya",
-        countryCode: "KE",
-        dialingCode: "254"
-    }) { id }
-    kw: createCountryCode(data: {
-        name: "Kuwait",
-        countryCode: "KW",
-        dialingCode: "965"
-    }) { id }
-    kg: createCountryCode(data: {
-        name: "Kyrgyzstan",
-        countryCode: "KG",
-        dialingCode: "996"
-    }) { id }
-    la: createCountryCode(data: {
-        name: "Laos",
-        countryCode: "LA",
-        dialingCode: "856"
-    }) { id }
-    lv: createCountryCode(data: {
-        name: "Latvia",
-        countryCode: "LV",
-        dialingCode: "371"
-    }) { id }
-    lb: createCountryCode(data: {
-        name: "Lebanon",
-        countryCode: "LB",
-        dialingCode: "961"
-    }) { id }
-    ls: createCountryCode(data: {
-        name: "Lesotho",
-        countryCode: "LS",
-        dialingCode: "266"
-    }) { id }
-    lr: createCountryCode(data: {
-        name: "Liberia",
-        countryCode: "LR",
-        dialingCode: "231"
-    }) { id }
-    ly: createCountryCode(data: {
-        name: "Libya",
-        countryCode: "LY",
-        dialingCode: "218"
-    }) { id }
-    li: createCountryCode(data: {
-        name: "Liechtenstein",
-        countryCode: "LI",
-        dialingCode: "423"
-    }) { id }
-    lt: createCountryCode(data: {
-        name: "Lithuania",
-        countryCode: "LT",
-        dialingCode: "370"
-    }) { id }
-    lu: createCountryCode(data: {
-        name: "Luxembourg",
-        countryCode: "LU",
-        dialingCode: "352"
-    }) { id }
-    mo: createCountryCode(data: {
-        name: "Macau",
-        countryCode: "MO",
-        dialingCode: "853"
-    }) { id }
-    mk: createCountryCode(data: {
-        name: "Macedonia",
-        countryCode: "MK",
-        dialingCode: "389"
-    }) { id }
-    mg: createCountryCode(data: {
-        name: "Madagascar",
-        countryCode: "MG",
-        dialingCode: "261"
-    }) { id }
-    mw: createCountryCode(data: {
-        name: "Malawi",
-        countryCode: "MW",
-        dialingCode: "265"
-    }) { id }
-    my: createCountryCode(data: {
-        name: "Malaysia",
-        countryCode: "MY",
-        dialingCode: "60"
-    }) { id }
-    mv: createCountryCode(data: {
-        name: "Maldives",
-        countryCode: "MV",
-        dialingCode: "960"
-    }) { id }
-    ml: createCountryCode(data: {
-        name: "Mali",
-        countryCode: "ML",
-        dialingCode: "223"
-    }) { id }
-    mt: createCountryCode(data: {
-        name: "Malta",
-        countryCode: "MT",
-        dialingCode: "356"
-    }) { id }
-    mu: createCountryCode(data: {
-        name: "Mauritius",
-        countryCode: "MU",
-        dialingCode: "230"
-    }) { id }
-    mx: createCountryCode(data: {
-        name: "Mexico",
-        countryCode: "MX",
-        dialingCode: "52"
-    }) { id }
-    md: createCountryCode(data: {
-        name: "Moldova",
-        countryCode: "MD",
-        dialingCode: "373"
-    }) { id }
-    mc: createCountryCode(data: {
-        name: "Monaco",
-        countryCode: "MC",
-        dialingCode: "377"
-    }) { id }
-    mn: createCountryCode(data: {
-        name: "Mongolia",
-        countryCode: "MN",
-        dialingCode: "976"
-    }) { id }
-    me: createCountryCode(data: {
-        name: "Montenegro",
-        countryCode: "ME",
-        dialingCode: "382"
-    }) { id }
-    ms: createCountryCode(data: {
-        name: "Montserrat",
-        countryCode: "MS",
-        dialingCode: "1664"
-    }) { id }
-    ma: createCountryCode(data: {
-        name: "Morocco",
-        countryCode: "MA",
-        dialingCode: "212"
-    }) { id }
-    mz: createCountryCode(data: {
-        name: "Mozambique",
-        countryCode: "MZ",
-        dialingCode: "258"
-    }) { id }
-    na: createCountryCode(data: {
-        name: "Namibia",
-        countryCode: "NA",
-        dialingCode: "264"
-    }) { id }
-    np: createCountryCode(data: {
-        name: "Nepal",
-        countryCode: "NP",
-        dialingCode: "977"
-    }) { id }
-    nl: createCountryCode(data: {
-        name: "Netherlands",
-        countryCode: "NL",
-        dialingCode: "31"
-    }) { id }
-    nc: createCountryCode(data: {
-        name: "New Caledonia",
-        countryCode: "NC",
-        dialingCode: "687"
-    }) { id }
-    nz: createCountryCode(data: {
-        name: "New Zealand",
-        countryCode: "NZ",
-        dialingCode: "64"
-    }) { id }
-    ni: createCountryCode(data: {
-        name: "Nicaragua",
-        countryCode: "NI",
-        dialingCode: "505"
-    }) { id }
-    ne: createCountryCode(data: {
-        name: "Niger",
-        countryCode: "NE",
-        dialingCode: "227"
-    }) { id }
-    no: createCountryCode(data: {
-        name: "Norway",
-        countryCode: "NO",
-        dialingCode: "47"
-    }) { id }
-    om: createCountryCode(data: {
-        name: "Oman",
-        countryCode: "OM",
-        dialingCode: "968"
-    }) { id }
-    pk: createCountryCode(data: {
-        name: "Pakistan",
-        countryCode: "PK",
-        dialingCode: "92"
-    }) { id }
-    pa: createCountryCode(data: {
-        name: "Panama",
-        countryCode: "PA",
-        dialingCode: "507"
-    }) { id }
-    pg: createCountryCode(data: {
-        name: "Papua New Guinea",
-        countryCode: "PG",
-        dialingCode: "675"
-    }) { id }
-    py: createCountryCode(data: {
-        name: "Paraguay",
-        countryCode: "PY",
-        dialingCode: "595"
-    }) { id }
-    pe: createCountryCode(data: {
-        name: "Peru",
-        countryCode: "PE",
-        dialingCode: "51"
-    }) { id }
-    ph: createCountryCode(data: {
-        name: "Philippines",
-        countryCode: "PH",
-        dialingCode: "63"
-    }) { id }
-    pl: createCountryCode(data: {
-        name: "Poland",
-        countryCode: "PL",
-        dialingCode: "48"
-    }) { id }
-    pt: createCountryCode(data: {
-        name: "Portugal",
-        countryCode: "PT",
-        dialingCode: "351"
-    }) { id }
-    qa: createCountryCode(data: {
-        name: "Qatar",
-        countryCode: "QA",
-        dialingCode: "974"
-    }) { id }
-    ro: createCountryCode(data: {
-        name: "Romania",
-        countryCode: "RO",
-        dialingCode: "40"
-    }) { id }
-    ru: createCountryCode(data: {
-        name: "Russia",
-        countryCode: "RU",
-        dialingCode: "7"
-    }) { id }
-    rw: createCountryCode(data: {
-        name: "Rwanda",
-        countryCode: "RW",
-        dialingCode: "250"
-    }) { id }
-    kn: createCountryCode(data: {
-        name: "Saint Kitts and Nevis",
-        countryCode: "KN",
-        dialingCode: "1869"
-    }) { id }
-    lc: createCountryCode(data: {
-        name: "Saint Lucia",
-        countryCode: "LC",
-        dialingCode: "1758"
-    }) { id }
-    mf: createCountryCode(data: {
-        name: "Saint Martin",
-        countryCode: "MF",
-        dialingCode: "1599"
-    }) { id }
-    vc: createCountryCode(data: {
-        name: "Saint Vincent and the Grenadines",
-        countryCode: "VC",
-        dialingCode: "1784"
-    }) { id }
-    sm: createCountryCode(data: {
-        name: "San Marino",
-        countryCode: "SM",
-        dialingCode: "378"
-    }) { id }
-    sa: createCountryCode(data: {
-        name: "Saudi Arabia",
-        countryCode: "SA",
-        dialingCode: "966"
-    }) { id }
-    sn: createCountryCode(data: {
-        name: "Senegal",
-        countryCode: "SN",
-        dialingCode: "221"
-    }) { id }
-    rs: createCountryCode(data: {
-        name: "Serbia / Kosovo",
-        countryCode: "RS",
-        dialingCode: "381"
-    }) { id }
-    sc: createCountryCode(data: {
-        name: "Seychelles",
-        countryCode: "SC",
-        dialingCode: "248"
-    }) { id }
-    sl: createCountryCode(data: {
-        name: "Sierra Leone",
-        countryCode: "SL",
-        dialingCode: "232"
-    }) { id }
-    sg: createCountryCode(data: {
-        name: "Singapore",
-        countryCode: "SG",
-        dialingCode: "65"
-    }) { id }
-    sk: createCountryCode(data: {
-        name: "Slovakia",
-        countryCode: "SK",
-        dialingCode: "421"
-    }) { id }
-    si: createCountryCode(data: {
-        name: "Slovenia",
-        countryCode: "SI",
-        dialingCode: "386"
-    }) { id }
-    za: createCountryCode(data: {
-        name: "South ca",
-        countryCode: "ZA",
-        dialingCode: "27"
-    }) { id }
-    kr: createCountryCode(data: {
-        name: "South Korea",
-        countryCode: "KR",
-        dialingCode: "82"
-    }) { id }
-    es: createCountryCode(data: {
-        name: "Spain",
-        countryCode: "ES",
-        dialingCode: "34"
-    }) { id }
-    lk: createCountryCode(data: {
-        name: "Sri Lanka",
-        countryCode: "LK",
-        dialingCode: "94"
-    }) { id }
-    sd: createCountryCode(data: {
-        name: "Sudan",
-        countryCode: "SD",
-        dialingCode: "249"
-    }) { id }
-    sr: createCountryCode(data: {
-        name: "Suriname",
-        countryCode: "SR",
-        dialingCode: "597"
-    }) { id }
-    sz: createCountryCode(data: {
-        name: "Swaziland",
-        countryCode: "SZ",
-        dialingCode: "268"
-    }) { id }
-    se: createCountryCode(data: {
-        name: "Sweden",
-        countryCode: "SE",
-        dialingCode: "46"
-    }) { id }
-    ch: createCountryCode(data: {
-        name: "Switzerland",
-        countryCode: "CH",
-        dialingCode: "41"
-    }) { id }
-    sy: createCountryCode(data: {
-        name: "Syria",
-        countryCode: "SY",
-        dialingCode: "963"
-    }) { id }
-    tw: createCountryCode(data: {
-        name: "Taiwan",
-        countryCode: "TW",
-        dialingCode: "886"
-    }) { id }
-    tj: createCountryCode(data: {
-        name: "Tajikistan",
-        countryCode: "TJ",
-        dialingCode: "992"
-    }) { id }
-    tz: createCountryCode(data: {
-        name: "Tanzania",
-        countryCode: "TZ",
-        dialingCode: "255"
-    }) { id }
-    th: createCountryCode(data: {
-        name: "Thailand",
-        countryCode: "TH",
-        dialingCode: "66"
-    }) { id }
-    tl: createCountryCode(data: {
-        name: "Timor-Leste",
-        countryCode: "TL",
-        dialingCode: "670"
-    }) { id }
-    tg: createCountryCode(data: {
-        name: "Togo",
-        countryCode: "TG",
-        dialingCode: "228"
-    }) { id }
-    tt: createCountryCode(data: {
-        name: "Trinidad and Tobago",
-        countryCode: "TT",
-        dialingCode: "1868"
-    }) { id }
-    tn: createCountryCode(data: {
-        name: "Tunisia",
-        countryCode: "TN",
-        dialingCode: "216"
-    }) { id }
-    tr: createCountryCode(data: {
-        name: "Turkey",
-        countryCode: "TR",
-        dialingCode: "90"
-    }) { id }
-    tm: createCountryCode(data: {
-        name: "Turkmenistan",
-        countryCode: "TM",
-        dialingCode: "993"
-    }) { id }
-    tc: createCountryCode(data: {
-        name: "Turks and Caicos Islands",
-        countryCode: "TC",
-        dialingCode: "1649"
-    }) { id }
-    ug: createCountryCode(data: {
-        name: "Uganda",
-        countryCode: "UG",
-        dialingCode: "256"
-    }) { id }
-    ua: createCountryCode(data: {
-        name: "Ukraine",
-        countryCode: "UA",
-        dialingCode: "380"
-    }) { id }
-    ae: createCountryCode(data: {
-        name: "United Arab Emirates",
-        countryCode: "AE",
-        dialingCode: "971"
-    }) { id }
-    gb: createCountryCode(data: {
-        name: "United Kingdom",
-        countryCode: "GB",
-        dialingCode: "44"
-    }) { id }
-    us: createCountryCode(data: {
-        name: "United States",
-        countryCode: "US",
-        dialingCode: "1"
-    }) { id }
-    uy: createCountryCode(data: {
-        name: "Uruguay",
-        countryCode: "UY",
-        dialingCode: "598"
-    }) { id }
-    vi: createCountryCode(data: {
-        name: "US Virgin Islands",
-        countryCode: "VI",
-        dialingCode: "1340"
-    }) { id }
-    uz: createCountryCode(data: {
-        name: "Uzbekistan",
-        countryCode: "UZ",
-        dialingCode: "998"
-    }) { id }
-    vu: createCountryCode(data: {
-        name: "Vanuatu",
-        countryCode: "VU",
-        dialingCode: "678"
-    }) { id }
-    ve: createCountryCode(data: {
-        name: "Venezuela",
-        countryCode: "VE",
-        dialingCode: "58"
-    }) { id }
-    vn: createCountryCode(data: {
-        name: "Vietnam",
-        countryCode: "VN",
-        dialingCode: "84"
-    }) { id }
-    ye: createCountryCode(data: {
-        name: "Yemen",
-        countryCode: "YE",
-        dialingCode: "967"
-    }) { id }
-    zm: createCountryCode(data: {
-        name: "Zambia",
-        countryCode: "ZM",
-        dialingCode: "260"
-    }) { id }
-    zw: createCountryCode(data: {
-        name: "Zimbabwe",
-        countryCode: "ZW",
-        dialingCode: "263"
-    }) { id }
+    cliApplication: createApplication(
+        data: {
+            name: "Doorcode"
+            appId: "2c33697d62c64de5adde587716930ecd"
+            description: "Allows users to manage their applications"
+            credentials: {
+                create: {
+                    secret: "$2y$10$8h1sEt0nFTvkmbCbI4PJmOXy/T8AtL4iXnmZzcreIThJ2ecLP/E2u"
+                }
+            }
+        }
+    ) {
+        id
+    }
+    af: createCountryCode(
+        data: { name: "Afghanistan", countryCode: "AF", dialingCode: "93" }
+    ) {
+        id
+    }
+    al: createCountryCode(
+        data: { name: "Albania", countryCode: "AL", dialingCode: "355" }
+    ) {
+        id
+    }
+    dz: createCountryCode(
+        data: { name: "Algeria", countryCode: "DZ", dialingCode: "213" }
+    ) {
+        id
+    }
+    ad: createCountryCode(
+        data: { name: "Andorra", countryCode: "AD", dialingCode: "376" }
+    ) {
+        id
+    }
+    ao: createCountryCode(
+        data: { name: "Angola", countryCode: "AO", dialingCode: "244" }
+    ) {
+        id
+    }
+    ai: createCountryCode(
+        data: { name: "Anguilla", countryCode: "AI", dialingCode: "1264" }
+    ) {
+        id
+    }
+    ag: createCountryCode(
+        data: {
+            name: "Antigua and Barbuda"
+            countryCode: "AG"
+            dialingCode: "1268"
+        }
+    ) {
+        id
+    }
+    ar: createCountryCode(
+        data: { name: "Argentina", countryCode: "AR", dialingCode: "54" }
+    ) {
+        id
+    }
+    am: createCountryCode(
+        data: { name: "Armenia", countryCode: "AM", dialingCode: "374" }
+    ) {
+        id
+    }
+    aw: createCountryCode(
+        data: { name: "Aruba", countryCode: "AW", dialingCode: "297" }
+    ) {
+        id
+    }
+    au: createCountryCode(
+        data: { name: "Australia", countryCode: "AU", dialingCode: "61" }
+    ) {
+        id
+    }
+    at: createCountryCode(
+        data: { name: "Austria", countryCode: "AT", dialingCode: "43" }
+    ) {
+        id
+    }
+    az: createCountryCode(
+        data: { name: "Azerbaijan", countryCode: "AZ", dialingCode: "994" }
+    ) {
+        id
+    }
+    bh: createCountryCode(
+        data: { name: "Bahrain", countryCode: "BH", dialingCode: "973" }
+    ) {
+        id
+    }
+    bd: createCountryCode(
+        data: { name: "Bangladesh", countryCode: "BD", dialingCode: "880" }
+    ) {
+        id
+    }
+    bb: createCountryCode(
+        data: { name: "Barbados", countryCode: "BB", dialingCode: "1246" }
+    ) {
+        id
+    }
+    by: createCountryCode(
+        data: { name: "Belarus", countryCode: "BY", dialingCode: "375" }
+    ) {
+        id
+    }
+    be: createCountryCode(
+        data: { name: "Belgium", countryCode: "BE", dialingCode: "32" }
+    ) {
+        id
+    }
+    bz: createCountryCode(
+        data: { name: "Belize", countryCode: "BZ", dialingCode: "501" }
+    ) {
+        id
+    }
+    bj: createCountryCode(
+        data: { name: "Benin", countryCode: "BJ", dialingCode: "229" }
+    ) {
+        id
+    }
+    bm: createCountryCode(
+        data: { name: "Bermuda", countryCode: "BM", dialingCode: "1441" }
+    ) {
+        id
+    }
+    bo: createCountryCode(
+        data: { name: "Bolivia", countryCode: "BO", dialingCode: "591" }
+    ) {
+        id
+    }
+    ba: createCountryCode(
+        data: {
+            name: "Bosnia and Herzegovina"
+            countryCode: "BA"
+            dialingCode: "387"
+        }
+    ) {
+        id
+    }
+    bw: createCountryCode(
+        data: { name: "Botswana", countryCode: "BW", dialingCode: "267" }
+    ) {
+        id
+    }
+    br: createCountryCode(
+        data: { name: "Brazil", countryCode: "BR", dialingCode: "55" }
+    ) {
+        id
+    }
+    vg: createCountryCode(
+        data: {
+            name: "British Virgin Islands"
+            countryCode: "VG"
+            dialingCode: "1284"
+        }
+    ) {
+        id
+    }
+    bn: createCountryCode(
+        data: { name: "Brunei", countryCode: "BN", dialingCode: "673" }
+    ) {
+        id
+    }
+    bg: createCountryCode(
+        data: { name: "Bulgaria", countryCode: "BG", dialingCode: "359" }
+    ) {
+        id
+    }
+    bf: createCountryCode(
+        data: { name: "Burkina Faso", countryCode: "BF", dialingCode: "226" }
+    ) {
+        id
+    }
+    bi: createCountryCode(
+        data: { name: "Burundi", countryCode: "BI", dialingCode: "257" }
+    ) {
+        id
+    }
+    kh: createCountryCode(
+        data: { name: "Cambodia", countryCode: "KH", dialingCode: "855" }
+    ) {
+        id
+    }
+    cm: createCountryCode(
+        data: { name: "Cameroon", countryCode: "CM", dialingCode: "237" }
+    ) {
+        id
+    }
+    cv: createCountryCode(
+        data: { name: "Cape Verde", countryCode: "CV", dialingCode: "238" }
+    ) {
+        id
+    }
+    ky: createCountryCode(
+        data: { name: "Cayman Islands", countryCode: "KY", dialingCode: "1345" }
+    ) {
+        id
+    }
+    cf: createCountryCode(
+        data: {
+            name: "Central can Republic"
+            countryCode: "CF"
+            dialingCode: "236"
+        }
+    ) {
+        id
+    }
+    td: createCountryCode(
+        data: { name: "Chad", countryCode: "TD", dialingCode: "235" }
+    ) {
+        id
+    }
+    cl: createCountryCode(
+        data: { name: "Chile", countryCode: "CL", dialingCode: "56" }
+    ) {
+        id
+    }
+    cn: createCountryCode(
+        data: { name: "China", countryCode: "CN", dialingCode: "86" }
+    ) {
+        id
+    }
+    co: createCountryCode(
+        data: { name: "Colombia", countryCode: "CO", dialingCode: "57" }
+    ) {
+        id
+    }
+    km: createCountryCode(
+        data: { name: "Comoros", countryCode: "KM", dialingCode: "269" }
+    ) {
+        id
+    }
+    cr: createCountryCode(
+        data: { name: "Costa Rica", countryCode: "CR", dialingCode: "506" }
+    ) {
+        id
+    }
+    hr: createCountryCode(
+        data: { name: "Croatia", countryCode: "HR", dialingCode: "385" }
+    ) {
+        id
+    }
+    cu: createCountryCode(
+        data: { name: "Cuba", countryCode: "CU", dialingCode: "53" }
+    ) {
+        id
+    }
+    cy: createCountryCode(
+        data: { name: "Cyprus", countryCode: "CY", dialingCode: "357" }
+    ) {
+        id
+    }
+    cz: createCountryCode(
+        data: { name: "Czech Republic", countryCode: "CZ", dialingCode: "420" }
+    ) {
+        id
+    }
+    cd: createCountryCode(
+        data: {
+            name: "Democratic Republic of the Congo"
+            countryCode: "CD"
+            dialingCode: "243"
+        }
+    ) {
+        id
+    }
+    dk: createCountryCode(
+        data: { name: "Denmark", countryCode: "DK", dialingCode: "45" }
+    ) {
+        id
+    }
+    dj: createCountryCode(
+        data: { name: "Djibouti", countryCode: "DJ", dialingCode: "253" }
+    ) {
+        id
+    }
+    dm: createCountryCode(
+        data: { name: "Dominica", countryCode: "DM", dialingCode: "1767" }
+    ) {
+        id
+    }
+    do: createCountryCode(
+        data: {
+            name: "Dominican Republic"
+            countryCode: "DO"
+            dialingCode: "1809"
+        }
+    ) {
+        id
+    }
+    ec: createCountryCode(
+        data: { name: "Ecuador", countryCode: "EC", dialingCode: "593" }
+    ) {
+        id
+    }
+    eg: createCountryCode(
+        data: { name: "Egypt", countryCode: "EG", dialingCode: "20" }
+    ) {
+        id
+    }
+    sv: createCountryCode(
+        data: { name: "El Salvador", countryCode: "SV", dialingCode: "503" }
+    ) {
+        id
+    }
+    ee: createCountryCode(
+        data: { name: "Estonia", countryCode: "EE", dialingCode: "372" }
+    ) {
+        id
+    }
+    et: createCountryCode(
+        data: { name: "Ethiopia", countryCode: "ET", dialingCode: "251" }
+    ) {
+        id
+    }
+    fo: createCountryCode(
+        data: { name: "Faroe Islands", countryCode: "FO", dialingCode: "298" }
+    ) {
+        id
+    }
+    fj: createCountryCode(
+        data: { name: "Fiji", countryCode: "FJ", dialingCode: "679" }
+    ) {
+        id
+    }
+    fi: createCountryCode(
+        data: { name: "Finland", countryCode: "FI", dialingCode: "358" }
+    ) {
+        id
+    }
+    pf: createCountryCode(
+        data: {
+            name: "French Polynesia"
+            countryCode: "PF"
+            dialingCode: "689"
+        }
+    ) {
+        id
+    }
+    ga: createCountryCode(
+        data: { name: "Gabon", countryCode: "GA", dialingCode: "241" }
+    ) {
+        id
+    }
+    gm: createCountryCode(
+        data: { name: "Gambia", countryCode: "GM", dialingCode: "220" }
+    ) {
+        id
+    }
+    ge: createCountryCode(
+        data: { name: "Georgia", countryCode: "GE", dialingCode: "995" }
+    ) {
+        id
+    }
+    de: createCountryCode(
+        data: { name: "Germany", countryCode: "DE", dialingCode: "49" }
+    ) {
+        id
+    }
+    gh: createCountryCode(
+        data: { name: "Ghana", countryCode: "GH", dialingCode: "233" }
+    ) {
+        id
+    }
+    gr: createCountryCode(
+        data: { name: "Greece", countryCode: "GR", dialingCode: "30" }
+    ) {
+        id
+    }
+    gl: createCountryCode(
+        data: { name: "Greenland", countryCode: "GL", dialingCode: "299" }
+    ) {
+        id
+    }
+    gd: createCountryCode(
+        data: { name: "Grenada", countryCode: "GD", dialingCode: "1473" }
+    ) {
+        id
+    }
+    gu: createCountryCode(
+        data: { name: "Guam", countryCode: "GU", dialingCode: "1671" }
+    ) {
+        id
+    }
+    gt: createCountryCode(
+        data: { name: "Guatemala", countryCode: "GT", dialingCode: "502" }
+    ) {
+        id
+    }
+    gn: createCountryCode(
+        data: { name: "Guinea", countryCode: "GN", dialingCode: "224" }
+    ) {
+        id
+    }
+    gw: createCountryCode(
+        data: { name: "Guinea-Bissau", countryCode: "GW", dialingCode: "245" }
+    ) {
+        id
+    }
+    gy: createCountryCode(
+        data: { name: "Guyana", countryCode: "GY", dialingCode: "592" }
+    ) {
+        id
+    }
+    ht: createCountryCode(
+        data: { name: "Haiti", countryCode: "HT", dialingCode: "509" }
+    ) {
+        id
+    }
+    hn: createCountryCode(
+        data: { name: "Honduras", countryCode: "HN", dialingCode: "504" }
+    ) {
+        id
+    }
+    hk: createCountryCode(
+        data: { name: "Hong Kong", countryCode: "HK", dialingCode: "852" }
+    ) {
+        id
+    }
+    hu: createCountryCode(
+        data: { name: "Hungary", countryCode: "HU", dialingCode: "36" }
+    ) {
+        id
+    }
+    is: createCountryCode(
+        data: { name: "Iceland", countryCode: "IS", dialingCode: "354" }
+    ) {
+        id
+    }
+    in: createCountryCode(
+        data: { name: "India", countryCode: "IN", dialingCode: "91" }
+    ) {
+        id
+    }
+    id: createCountryCode(
+        data: { name: "Indonesia", countryCode: "ID", dialingCode: "62" }
+    ) {
+        id
+    }
+    ir: createCountryCode(
+        data: { name: "Iran", countryCode: "IR", dialingCode: "98" }
+    ) {
+        id
+    }
+    iq: createCountryCode(
+        data: { name: "Iraq", countryCode: "IQ", dialingCode: "964" }
+    ) {
+        id
+    }
+    ie: createCountryCode(
+        data: { name: "Ireland", countryCode: "IE", dialingCode: "353" }
+    ) {
+        id
+    }
+    il: createCountryCode(
+        data: { name: "Israel", countryCode: "IL", dialingCode: "972" }
+    ) {
+        id
+    }
+    it: createCountryCode(
+        data: { name: "Italy", countryCode: "IT", dialingCode: "39" }
+    ) {
+        id
+    }
+    ci: createCountryCode(
+        data: { name: "Ivory Coast", countryCode: "CI", dialingCode: "225" }
+    ) {
+        id
+    }
+    jm: createCountryCode(
+        data: { name: "Jamaica", countryCode: "JM", dialingCode: "1876" }
+    ) {
+        id
+    }
+    jp: createCountryCode(
+        data: { name: "Japan", countryCode: "JP", dialingCode: "81" }
+    ) {
+        id
+    }
+    jo: createCountryCode(
+        data: { name: "Jordan", countryCode: "JO", dialingCode: "962" }
+    ) {
+        id
+    }
+    kz: createCountryCode(
+        data: { name: "Kazakhstan", countryCode: "KZ", dialingCode: "74" }
+    ) {
+        id
+    }
+    kz2: createCountryCode(
+        data: { name: "Kazakhstan", countryCode: "KZ", dialingCode: "76" }
+    ) {
+        id
+    }
+    ke: createCountryCode(
+        data: { name: "Kenya", countryCode: "KE", dialingCode: "254" }
+    ) {
+        id
+    }
+    kw: createCountryCode(
+        data: { name: "Kuwait", countryCode: "KW", dialingCode: "965" }
+    ) {
+        id
+    }
+    kg: createCountryCode(
+        data: { name: "Kyrgyzstan", countryCode: "KG", dialingCode: "996" }
+    ) {
+        id
+    }
+    la: createCountryCode(
+        data: { name: "Laos", countryCode: "LA", dialingCode: "856" }
+    ) {
+        id
+    }
+    lv: createCountryCode(
+        data: { name: "Latvia", countryCode: "LV", dialingCode: "371" }
+    ) {
+        id
+    }
+    lb: createCountryCode(
+        data: { name: "Lebanon", countryCode: "LB", dialingCode: "961" }
+    ) {
+        id
+    }
+    ls: createCountryCode(
+        data: { name: "Lesotho", countryCode: "LS", dialingCode: "266" }
+    ) {
+        id
+    }
+    lr: createCountryCode(
+        data: { name: "Liberia", countryCode: "LR", dialingCode: "231" }
+    ) {
+        id
+    }
+    ly: createCountryCode(
+        data: { name: "Libya", countryCode: "LY", dialingCode: "218" }
+    ) {
+        id
+    }
+    li: createCountryCode(
+        data: { name: "Liechtenstein", countryCode: "LI", dialingCode: "423" }
+    ) {
+        id
+    }
+    lt: createCountryCode(
+        data: { name: "Lithuania", countryCode: "LT", dialingCode: "370" }
+    ) {
+        id
+    }
+    lu: createCountryCode(
+        data: { name: "Luxembourg", countryCode: "LU", dialingCode: "352" }
+    ) {
+        id
+    }
+    mo: createCountryCode(
+        data: { name: "Macau", countryCode: "MO", dialingCode: "853" }
+    ) {
+        id
+    }
+    mk: createCountryCode(
+        data: { name: "Macedonia", countryCode: "MK", dialingCode: "389" }
+    ) {
+        id
+    }
+    mg: createCountryCode(
+        data: { name: "Madagascar", countryCode: "MG", dialingCode: "261" }
+    ) {
+        id
+    }
+    mw: createCountryCode(
+        data: { name: "Malawi", countryCode: "MW", dialingCode: "265" }
+    ) {
+        id
+    }
+    my: createCountryCode(
+        data: { name: "Malaysia", countryCode: "MY", dialingCode: "60" }
+    ) {
+        id
+    }
+    mv: createCountryCode(
+        data: { name: "Maldives", countryCode: "MV", dialingCode: "960" }
+    ) {
+        id
+    }
+    ml: createCountryCode(
+        data: { name: "Mali", countryCode: "ML", dialingCode: "223" }
+    ) {
+        id
+    }
+    mt: createCountryCode(
+        data: { name: "Malta", countryCode: "MT", dialingCode: "356" }
+    ) {
+        id
+    }
+    mu: createCountryCode(
+        data: { name: "Mauritius", countryCode: "MU", dialingCode: "230" }
+    ) {
+        id
+    }
+    mx: createCountryCode(
+        data: { name: "Mexico", countryCode: "MX", dialingCode: "52" }
+    ) {
+        id
+    }
+    md: createCountryCode(
+        data: { name: "Moldova", countryCode: "MD", dialingCode: "373" }
+    ) {
+        id
+    }
+    mc: createCountryCode(
+        data: { name: "Monaco", countryCode: "MC", dialingCode: "377" }
+    ) {
+        id
+    }
+    mn: createCountryCode(
+        data: { name: "Mongolia", countryCode: "MN", dialingCode: "976" }
+    ) {
+        id
+    }
+    me: createCountryCode(
+        data: { name: "Montenegro", countryCode: "ME", dialingCode: "382" }
+    ) {
+        id
+    }
+    ms: createCountryCode(
+        data: { name: "Montserrat", countryCode: "MS", dialingCode: "1664" }
+    ) {
+        id
+    }
+    ma: createCountryCode(
+        data: { name: "Morocco", countryCode: "MA", dialingCode: "212" }
+    ) {
+        id
+    }
+    mz: createCountryCode(
+        data: { name: "Mozambique", countryCode: "MZ", dialingCode: "258" }
+    ) {
+        id
+    }
+    na: createCountryCode(
+        data: { name: "Namibia", countryCode: "NA", dialingCode: "264" }
+    ) {
+        id
+    }
+    np: createCountryCode(
+        data: { name: "Nepal", countryCode: "NP", dialingCode: "977" }
+    ) {
+        id
+    }
+    nl: createCountryCode(
+        data: { name: "Netherlands", countryCode: "NL", dialingCode: "31" }
+    ) {
+        id
+    }
+    nc: createCountryCode(
+        data: { name: "New Caledonia", countryCode: "NC", dialingCode: "687" }
+    ) {
+        id
+    }
+    nz: createCountryCode(
+        data: { name: "New Zealand", countryCode: "NZ", dialingCode: "64" }
+    ) {
+        id
+    }
+    ni: createCountryCode(
+        data: { name: "Nicaragua", countryCode: "NI", dialingCode: "505" }
+    ) {
+        id
+    }
+    ne: createCountryCode(
+        data: { name: "Niger", countryCode: "NE", dialingCode: "227" }
+    ) {
+        id
+    }
+    no: createCountryCode(
+        data: { name: "Norway", countryCode: "NO", dialingCode: "47" }
+    ) {
+        id
+    }
+    om: createCountryCode(
+        data: { name: "Oman", countryCode: "OM", dialingCode: "968" }
+    ) {
+        id
+    }
+    pk: createCountryCode(
+        data: { name: "Pakistan", countryCode: "PK", dialingCode: "92" }
+    ) {
+        id
+    }
+    pa: createCountryCode(
+        data: { name: "Panama", countryCode: "PA", dialingCode: "507" }
+    ) {
+        id
+    }
+    pg: createCountryCode(
+        data: {
+            name: "Papua New Guinea"
+            countryCode: "PG"
+            dialingCode: "675"
+        }
+    ) {
+        id
+    }
+    py: createCountryCode(
+        data: { name: "Paraguay", countryCode: "PY", dialingCode: "595" }
+    ) {
+        id
+    }
+    pe: createCountryCode(
+        data: { name: "Peru", countryCode: "PE", dialingCode: "51" }
+    ) {
+        id
+    }
+    ph: createCountryCode(
+        data: { name: "Philippines", countryCode: "PH", dialingCode: "63" }
+    ) {
+        id
+    }
+    pl: createCountryCode(
+        data: { name: "Poland", countryCode: "PL", dialingCode: "48" }
+    ) {
+        id
+    }
+    pt: createCountryCode(
+        data: { name: "Portugal", countryCode: "PT", dialingCode: "351" }
+    ) {
+        id
+    }
+    qa: createCountryCode(
+        data: { name: "Qatar", countryCode: "QA", dialingCode: "974" }
+    ) {
+        id
+    }
+    ro: createCountryCode(
+        data: { name: "Romania", countryCode: "RO", dialingCode: "40" }
+    ) {
+        id
+    }
+    ru: createCountryCode(
+        data: { name: "Russia", countryCode: "RU", dialingCode: "7" }
+    ) {
+        id
+    }
+    rw: createCountryCode(
+        data: { name: "Rwanda", countryCode: "RW", dialingCode: "250" }
+    ) {
+        id
+    }
+    kn: createCountryCode(
+        data: {
+            name: "Saint Kitts and Nevis"
+            countryCode: "KN"
+            dialingCode: "1869"
+        }
+    ) {
+        id
+    }
+    lc: createCountryCode(
+        data: { name: "Saint Lucia", countryCode: "LC", dialingCode: "1758" }
+    ) {
+        id
+    }
+    mf: createCountryCode(
+        data: { name: "Saint Martin", countryCode: "MF", dialingCode: "1599" }
+    ) {
+        id
+    }
+    vc: createCountryCode(
+        data: {
+            name: "Saint Vincent and the Grenadines"
+            countryCode: "VC"
+            dialingCode: "1784"
+        }
+    ) {
+        id
+    }
+    sm: createCountryCode(
+        data: { name: "San Marino", countryCode: "SM", dialingCode: "378" }
+    ) {
+        id
+    }
+    sa: createCountryCode(
+        data: { name: "Saudi Arabia", countryCode: "SA", dialingCode: "966" }
+    ) {
+        id
+    }
+    sn: createCountryCode(
+        data: { name: "Senegal", countryCode: "SN", dialingCode: "221" }
+    ) {
+        id
+    }
+    rs: createCountryCode(
+        data: { name: "Serbia / Kosovo", countryCode: "RS", dialingCode: "381" }
+    ) {
+        id
+    }
+    sc: createCountryCode(
+        data: { name: "Seychelles", countryCode: "SC", dialingCode: "248" }
+    ) {
+        id
+    }
+    sl: createCountryCode(
+        data: { name: "Sierra Leone", countryCode: "SL", dialingCode: "232" }
+    ) {
+        id
+    }
+    sg: createCountryCode(
+        data: { name: "Singapore", countryCode: "SG", dialingCode: "65" }
+    ) {
+        id
+    }
+    sk: createCountryCode(
+        data: { name: "Slovakia", countryCode: "SK", dialingCode: "421" }
+    ) {
+        id
+    }
+    si: createCountryCode(
+        data: { name: "Slovenia", countryCode: "SI", dialingCode: "386" }
+    ) {
+        id
+    }
+    za: createCountryCode(
+        data: { name: "South ca", countryCode: "ZA", dialingCode: "27" }
+    ) {
+        id
+    }
+    kr: createCountryCode(
+        data: { name: "South Korea", countryCode: "KR", dialingCode: "82" }
+    ) {
+        id
+    }
+    es: createCountryCode(
+        data: { name: "Spain", countryCode: "ES", dialingCode: "34" }
+    ) {
+        id
+    }
+    lk: createCountryCode(
+        data: { name: "Sri Lanka", countryCode: "LK", dialingCode: "94" }
+    ) {
+        id
+    }
+    sd: createCountryCode(
+        data: { name: "Sudan", countryCode: "SD", dialingCode: "249" }
+    ) {
+        id
+    }
+    sr: createCountryCode(
+        data: { name: "Suriname", countryCode: "SR", dialingCode: "597" }
+    ) {
+        id
+    }
+    sz: createCountryCode(
+        data: { name: "Swaziland", countryCode: "SZ", dialingCode: "268" }
+    ) {
+        id
+    }
+    se: createCountryCode(
+        data: { name: "Sweden", countryCode: "SE", dialingCode: "46" }
+    ) {
+        id
+    }
+    ch: createCountryCode(
+        data: { name: "Switzerland", countryCode: "CH", dialingCode: "41" }
+    ) {
+        id
+    }
+    sy: createCountryCode(
+        data: { name: "Syria", countryCode: "SY", dialingCode: "963" }
+    ) {
+        id
+    }
+    tw: createCountryCode(
+        data: { name: "Taiwan", countryCode: "TW", dialingCode: "886" }
+    ) {
+        id
+    }
+    tj: createCountryCode(
+        data: { name: "Tajikistan", countryCode: "TJ", dialingCode: "992" }
+    ) {
+        id
+    }
+    tz: createCountryCode(
+        data: { name: "Tanzania", countryCode: "TZ", dialingCode: "255" }
+    ) {
+        id
+    }
+    th: createCountryCode(
+        data: { name: "Thailand", countryCode: "TH", dialingCode: "66" }
+    ) {
+        id
+    }
+    tl: createCountryCode(
+        data: { name: "Timor-Leste", countryCode: "TL", dialingCode: "670" }
+    ) {
+        id
+    }
+    tg: createCountryCode(
+        data: { name: "Togo", countryCode: "TG", dialingCode: "228" }
+    ) {
+        id
+    }
+    tt: createCountryCode(
+        data: {
+            name: "Trinidad and Tobago"
+            countryCode: "TT"
+            dialingCode: "1868"
+        }
+    ) {
+        id
+    }
+    tn: createCountryCode(
+        data: { name: "Tunisia", countryCode: "TN", dialingCode: "216" }
+    ) {
+        id
+    }
+    tr: createCountryCode(
+        data: { name: "Turkey", countryCode: "TR", dialingCode: "90" }
+    ) {
+        id
+    }
+    tm: createCountryCode(
+        data: { name: "Turkmenistan", countryCode: "TM", dialingCode: "993" }
+    ) {
+        id
+    }
+    tc: createCountryCode(
+        data: {
+            name: "Turks and Caicos Islands"
+            countryCode: "TC"
+            dialingCode: "1649"
+        }
+    ) {
+        id
+    }
+    ug: createCountryCode(
+        data: { name: "Uganda", countryCode: "UG", dialingCode: "256" }
+    ) {
+        id
+    }
+    ua: createCountryCode(
+        data: { name: "Ukraine", countryCode: "UA", dialingCode: "380" }
+    ) {
+        id
+    }
+    ae: createCountryCode(
+        data: {
+            name: "United Arab Emirates"
+            countryCode: "AE"
+            dialingCode: "971"
+        }
+    ) {
+        id
+    }
+    gb: createCountryCode(
+        data: { name: "United Kingdom", countryCode: "GB", dialingCode: "44" }
+    ) {
+        id
+    }
+    us: createCountryCode(
+        data: { name: "United States", countryCode: "US", dialingCode: "1" }
+    ) {
+        id
+    }
+    uy: createCountryCode(
+        data: { name: "Uruguay", countryCode: "UY", dialingCode: "598" }
+    ) {
+        id
+    }
+    vi: createCountryCode(
+        data: {
+            name: "US Virgin Islands"
+            countryCode: "VI"
+            dialingCode: "1340"
+        }
+    ) {
+        id
+    }
+    uz: createCountryCode(
+        data: { name: "Uzbekistan", countryCode: "UZ", dialingCode: "998" }
+    ) {
+        id
+    }
+    vu: createCountryCode(
+        data: { name: "Vanuatu", countryCode: "VU", dialingCode: "678" }
+    ) {
+        id
+    }
+    ve: createCountryCode(
+        data: { name: "Venezuela", countryCode: "VE", dialingCode: "58" }
+    ) {
+        id
+    }
+    vn: createCountryCode(
+        data: { name: "Vietnam", countryCode: "VN", dialingCode: "84" }
+    ) {
+        id
+    }
+    ye: createCountryCode(
+        data: { name: "Yemen", countryCode: "YE", dialingCode: "967" }
+    ) {
+        id
+    }
+    zm: createCountryCode(
+        data: { name: "Zambia", countryCode: "ZM", dialingCode: "260" }
+    ) {
+        id
+    }
+    zw: createCountryCode(
+        data: { name: "Zimbabwe", countryCode: "ZW", dialingCode: "263" }
+    ) {
+        id
+    }
 }
-

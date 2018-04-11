@@ -9,7 +9,7 @@ import {
     Prisma,
 } from '../generated/prisma'
 
-import { Context } from '../utils'
+import { AuthorizedApplicationResponse, Context } from '../utils'
 
 const upsertPhoneNumber = async (
     phoneNumber: string,
@@ -33,6 +33,7 @@ const upsertIdentifier = async (
     hash: string,
     code: { value: string; validUntil: string },
     phoneNumber: PhoneNumberResponse,
+    authorizedApplicationId: string,
     db: Prisma,
 ): Promise<IdentifierResponse> => {
     const payload = {
@@ -43,6 +44,7 @@ const upsertIdentifier = async (
                 {
                     code: code.value,
                     validUntil: code.validUntil,
+                    application: { connect: { id: authorizedApplicationId } },
                 },
             ],
         },
@@ -66,6 +68,7 @@ const verifyWithPhoneNumber = async (
     phoneNumber: string,
     dialingCode: string,
     db: Prisma,
+    authorizedApplication?: AuthorizedApplicationResponse,
 ): Promise<{ success: boolean; error?: string }> => {
     try {
         const codeCountryExists: boolean = await db.exists.CountryCode({
@@ -78,13 +81,15 @@ const verifyWithPhoneNumber = async (
 
         const node = await upsertPhoneNumber(phoneNumber, dialingCode, db)
         const hash = Identifier.generateHash(phoneNumber)
+        const code = VerificationCode.generateCode()
         const identifier = await upsertIdentifier(
             hash,
             {
-                value: VerificationCode.generateCode(),
+                value: code,
                 validUntil: VerificationCode.generateValidUntil(),
             },
             node,
+            authorizedApplication.id,
             db,
         )
 

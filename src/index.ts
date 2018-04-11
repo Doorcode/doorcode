@@ -1,23 +1,46 @@
 import { GraphQLServer, Options, PubSub } from '@fabien0102/graphql-yoga' // https://github.com/graphcool/graphql-yoga/pull/209
 import { ApolloEngine } from 'apollo-engine'
-import { Server } from 'http'
+import { IncomingMessage, Server } from 'http'
 import { Prisma } from './generated/prisma'
 import resolvers from './resolvers'
+import { authorizationExtraction, Context, database } from './utils'
+
+import { ContextParameters } from '@fabien0102/graphql-yoga/dist/src/types'
+// tslint:disable-next-line:no-implicit-dependencies
+import { NextFunction, Request, Response } from 'express-serve-static-core'
+
+interface AuthorizedApplicationRequest extends Request {
+    authorization: null | { appId: string }
+}
+
+interface AuthorizedApplicationContextParameters extends ContextParameters {
+    request: AuthorizedApplicationRequest
+}
 
 const pubsub = new PubSub()
 const server = new GraphQLServer({
     typeDefs: './src/schema.graphql',
     resolvers,
-    context: req => ({
-        ...req,
-        db: new Prisma({
-            endpoint: process.env.PRISMA_ENDPOINT, // the endpoint of the Prisma DB service (value is set in .env)
-            secret: process.env.PRISMA_SECRET, // taken from database/prisma.yml (value is set in .env)
-            debug: process.env.NODE_ENV !== 'production', // log all GraphQL queries & mutations
-        }),
+    context: (params: AuthorizedApplicationContextParameters) => ({
+        authorizedApplication: params.request.authorization,
+        db: database,
         pubsub,
     }),
 })
+
+server.express.use(
+    (req: AuthorizedApplicationRequest, res: Response, next: NextFunction) => {
+        authorizationExtraction(req, database)
+            .then((app: { appId: string }) => {
+                req.authorization = app
+                next()
+            })
+            .catch(error => {
+                res.status(401)
+                res.send({ message: error.message })
+            })
+    },
+)
 
 const engine = new ApolloEngine({
     apiKey: process.env.APOLLO_ENGINE_KEY,

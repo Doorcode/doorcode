@@ -14,12 +14,16 @@ export class ClockworkProvider implements SMSProvider {
         this.api = new Clockwork({ key })
     }
 
-    async send(phoneNumber: string, message: string): Promise<boolean> {
+    async send(
+        phoneNumber: string,
+        message: string,
+        from?: string,
+    ): Promise<boolean> {
         const request = new Promise((resolve, reject) => {
             this.api.sendSms(
                 {
                     To: phoneNumber,
-                    From: process.env.DOORCODE_SMS_SENDER_NAME,
+                    From: from || process.env.DOORCODE_SMS_SENDER_NAME,
                     Content: message,
                 },
                 (err, res) => {

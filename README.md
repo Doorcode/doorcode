@@ -118,7 +118,7 @@ Copy `.env.dist` and update with relevant value for environment destination
 
 First you'll need to export the docker env variables for the `prisma` machine using `eval $(docker-machine env prisma)`.
 
-If there is a cluster already running you'll need to stop the prisma container `docker stop doorcode_prisma-database_1` and delete it `docker rm doorcode_prisma-database_1` so we can upgrade the prisma version. You should first update `docker-compose.yml` with a newer version on this line `'prismagraphql/prisma:x.x.x'`.
+If there is a cluster already running you'll need to stop the prisma container `docker stop doorcode_prisma-database_1` so we can upgrade the prisma version. You should first update `docker-compose.yml` with a newer version on this line `'prismagraphql/prisma:x.x.x'`.
 
 Finally execute `docker-compose up -d` to pull the latest version specified and bring up the prisma application.
 

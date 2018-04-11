@@ -8,6 +8,9 @@ interface SendVerificationCodeRequestPayload {
     data: {
         verificationCode: {
             node: {
+                application: {
+                    name: string
+                }
                 code: string
                 validUntil: string
                 identifier: {
@@ -49,6 +52,8 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
         const dialingCode = phoneNumber.countryCode.dialingCode
         const verificationCode = request.data.verificationCode.node.code
         const validUntil = request.data.verificationCode.node.validUntil
+        const applicationName =
+            request.data.verificationCode.node.application.name
 
         // Ensure verification code hasn't expired
         if (moment(validUntil).isBefore(moment())) {
@@ -60,6 +65,7 @@ export default async (req: IncomingMessage, res: ServerResponse) => {
             .send(
                 `${dialingCode}${phoneNumber.phoneNumber}`,
                 `Here is your verification code: ${verificationCode}`,
+                applicationName,
             )
             .then((success: boolean) => {
                 if (!success) {
